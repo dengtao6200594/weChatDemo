@@ -1,0 +1,12 @@
+.container {
+  display: flex;
+  height: calc(100vh - 90rpx);
+}
+.container .leftMenu {
+  height: 100%;
+  flex: 2;
+}
+.container .rightContent {
+  height: 100%;
+  flex: 5;
+}

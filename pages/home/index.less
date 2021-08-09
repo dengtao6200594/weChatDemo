@@ -1,0 +1,69 @@
+/* pages/home/index.wxss */
+.home {
+	.swiper {
+		// 根据设计图片740*340进行调整,原为100%*150
+		width: 750rpx;
+		height: 340rpx;
+		.swiper_img {
+			width: 100%;
+		}
+	}
+	.cate_list {
+		display: flex;
+		navigator {
+			flex: 1;
+			image {
+				width: 100%;
+			}
+		}
+	}
+	.floor {
+		padding: 15rpx;
+	}
+	.floor_group {
+		.floor_title {
+      padding: 10rpx 0;
+			image {
+				width: 100%;
+			}
+		}
+		// 使用grid优化
+		.floor_lists {
+			display: grid;
+			grid-template-columns: repeat(3, 32.5%);
+			grid-template-rows: repeat(2, 193rpx);
+			grid-gap: 10rpx;
+			navigator {
+				&:first-child {
+					grid-row-start: 1;
+					grid-row-end: 3;
+				}
+				image {
+					width: 100%;
+					height: 100%;
+				}
+			}
+		}
+	}
+	// .floor_group {
+	// 	.floor_title {
+	// 		image {
+	// 			width: 100%;
+	// 		}
+	// 	}
+	// 	.floor_lists {
+	// 		overflow: hidden;
+	// 		navigator {
+	// 			float: left;
+	// 			width: 33.33vw;
+	// 			&:nth-last-child(-n + 4) {
+	// 				height: (33.33vw * 386 / 232 / 2);
+	// 			}
+	// 			image {
+	// 				width: 100%;
+	// 				height: 100%;
+	// 			}
+	// 		}
+	// 	}
+	// }
+}

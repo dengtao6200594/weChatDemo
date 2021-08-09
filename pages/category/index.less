@@ -1,0 +1,13 @@
+.container {
+	display: flex;
+  // less中使用calc表达式需要~''进行转换
+	height: ~'calc(100vh - 90rpx)';
+	.leftMenu {
+		height: 100%;
+		flex: 2;
+	}
+	.rightContent {
+		height: 100%;
+		flex: 5;
+	}
+}
