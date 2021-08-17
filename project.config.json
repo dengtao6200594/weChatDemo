@@ -6,8 +6,8 @@
   "setting": {
     "urlCheck": false,
     "es6": true,
-    "enhance": false,
-    "postcss": true,
+    "enhance": true,
+    "postcss": false,
     "preloadBackgroundData": false,
     "minified": true,
     "newFeature": false,
@@ -39,7 +39,7 @@
     "minifyWXSS": true
   },
   "compileType": "miniprogram",
-  "libVersion": "2.19.0",
+  "libVersion": "2.19.1",
   "appid": "wx2d4752b06702b483",
   "projectname": "%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8FbyJS",
   "debugOptions": {

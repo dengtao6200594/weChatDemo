@@ -6,7 +6,39 @@
   height: 100%;
   flex: 2;
 }
+.container .leftMenu .leftItem {
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 30rpx;
+  text-align: center;
+}
+.container .leftMenu .active {
+  color: red;
+  border-left: 5rpx solid currentColor;
+}
 .container .rightContent {
   height: 100%;
   flex: 5;
+}
+.container .rightContent .title {
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+}
+.container .rightContent .title::before,
+.container .rightContent .title::after {
+  content: '/';
+  color: #ccc;
+  padding: 0 10rpx;
+}
+.container .rightContent .rightItem .content {
+  display: flex;
+  flex-wrap: wrap;
+}
+.container .rightContent .rightItem .content .subItem {
+  width: 33.33%;
+  text-align: center;
+}
+.container .rightContent .rightItem .content .subItem image {
+  width: 50%;
 }

@@ -6,7 +6,8 @@
     "pages/user/index",
     "pages/car/index",
     "pages/category/index",
-    "pages/search/index"
+    "pages/search/index",
+    "pages/category/goodsList/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -29,7 +30,7 @@
       },
       {
         "pagePath": "pages/category/index",
-        "text": "主页",
+        "text": "商品种类",
         "iconPath": "style/icons/category.png",
         "selectedIconPath": "style/icons/category-s.png"
       },
