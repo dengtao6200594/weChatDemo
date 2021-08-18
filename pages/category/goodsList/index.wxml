@@ -2,10 +2,13 @@
 <Tabs tabs="{{tabs}}" bind:activeChange="handleTabsChange">
     <block wx:if="{{tabs[0].isActive}}">
         <view class="content">
-            <navigator class="good">
+            <navigator class="good" wx:for="{{goodLists}}" wx:key="goods_id">
                 <view class="image">
-                    <image src="">
-                    </image>
+                    <image mode="widthFix" src="{{item.goods_small_logo}}"></image>
+                </view>
+                <view class="content">
+                    <view class="name">{{item.goods_name}}</view>
+                    <view class="price">￥{{item.goods_price}}</view>
                 </view>
             </navigator>
         </view>
