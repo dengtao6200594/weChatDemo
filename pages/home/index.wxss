@@ -1,0 +1,40 @@
+/* pages/home/index.wxss */
+.home .swiper {
+  width: 750rpx;
+  height: 340rpx;
+}
+.home .swiper .swiper_img {
+  width: 100%;
+}
+.home .cate_list {
+  display: flex;
+}
+.home .cate_list navigator {
+  flex: 1;
+}
+.home .cate_list navigator image {
+  width: 100%;
+}
+.home .floor {
+  padding: 15rpx;
+}
+.home .floor_group .floor_title {
+  padding: 10rpx 0;
+}
+.home .floor_group .floor_title image {
+  width: 100%;
+}
+.home .floor_group .floor_lists {
+  display: grid;
+  grid-template-columns: repeat(3, 32.5%);
+  grid-template-rows: repeat(2, 193rpx);
+  grid-gap: 10rpx;
+}
+.home .floor_group .floor_lists navigator:first-child {
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+.home .floor_group .floor_lists navigator image {
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,35 @@
+/* pages/category/goodsList/index.wxss */
+.good {
+	display: flex;
+	height: 218rpx;
+	border-bottom: 2rpx solid #ccc;
+
+	.image {
+		flex: 2;
+		vertical-align: middle;
+		text-align: center;
+
+		image {
+			width: 70%;
+		}
+	}
+
+	.content {
+		flex: 3;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+
+		.name {
+			overflow: hidden;
+			display: -webkit-box;
+			-webkit-box-orient: vertical;
+			-webkit-line-clamp: 2;
+		}
+
+		.price {
+			color: var(--themeColor);
+			font-size: 32rpx;
+		}
+	}
+}
