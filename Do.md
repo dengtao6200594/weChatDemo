@@ -1,3 +1,17 @@
+HTML
+
+在组件节点添加一些自定义数据，以便事件可以获取
+
+```html
+<view data-index="1" bindtap="bindViewTap"> DataSet Test </view>
+```
+
+```js
+bindViewTap(){e.currentTarget.dataset.index===1}
+```
+
+button具有分享，打开客服，打开意见反馈，获取用户信息，打开App等多个个能
+
 CSS：超出文本宽度的内容省略号
 
 `/goodLists/index.less`
@@ -29,4 +43,9 @@ JS:滚动条触底 onReachButtom。提示框wx,showToast({})。
 
 request.js中wx.showLoading()和wx.hideLoading()加载时机
 
-兼容行：图片.webp在真机调试不行，换成jpg,png
+wx.previewImage()全屏预览图片
+
+wx.chooseAddress()跳转收货地址
+
+兼容问题：图片.webp在iphone真机调试不行，换成jpg,png
+

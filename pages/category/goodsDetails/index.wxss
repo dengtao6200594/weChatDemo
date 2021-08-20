@@ -1,4 +1,7 @@
 /* pages/category/goodsDetails/index.wxss */
+.detail {
+  padding-bottom: 90rpx;
+}
 .detail_swiper {
   height: 65vw;
   text-align: center;
@@ -40,4 +43,52 @@
   font-weight: 600;
   padding: 20rpx;
   border-bottom: 5rpx solid #dedede;
+}
+.btm_tools {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 90rpx;
+  background: #fff;
+  display: flex;
+  align-items: center;
+}
+.btm_tools .btm_tools_item {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.btm_tools .btm_tools_item button {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+.btm_tools .addShoppingTrolley {
+  flex: 2;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffa500;
+  color: #fff;
+  font-size: 30rpx;
+  font-weight: 600;
+}
+.btm_tools .buyImmediately {
+  flex: 2;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffa500;
+  color: #fff;
+  font-size: 30rpx;
+  font-weight: 600;
+  background: #eb4450;
 }

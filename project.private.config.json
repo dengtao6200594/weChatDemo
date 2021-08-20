@@ -29,6 +29,12 @@
           "pathName": "pages/category/goodsDetails/index",
           "query": "goods_id=57444",
           "scene": null
+        },
+        {
+          "name": "pages/car/index",
+          "pathName": "pages/car/index",
+          "query": "",
+          "scene": null
         }
       ]
     }

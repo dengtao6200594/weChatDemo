@@ -1,2 +1,33 @@
-<!--pages/car/index.wxml-->
-<text>pages/car/index.wxml</text>
+<!-- 收获地址 -->
+<view class="revice_address">
+	<view class="btn">
+		<button bindtap="handleChooseAddress" type="primary" plain>获取收获地址</button>
+	</view>
+	<view class="userInfo">
+		<view class="user">
+			<view class="name">{{address.userName}}</view>
+			<view class="address">{{address.provinceName+address.cityName+address.countyName+address.detailInfo}}</view>
+		</view>
+		<view class="telephone">
+			<text> {{address.telNumber}}</text>
+		</view>
+	</view>
+	<view class="cart">
+		<view class="cart_chk">
+			<checkbox-group bindchange="">
+				<checkbox>
+				</checkbox>
+			</checkbox-group>
+		</view>
+		<navigator class="cart_image">
+			<image class="" src="" mode="widthFix" />
+		</navigator>
+		<view class="cart_info">
+			<view class="content">ds</view>
+			<text class="price">132</text>
+			<view class="reduce">-</view>
+			<view class="num">1</view>
+			<view class="add">+</view>
+		</view>
+	</view>
+</view>
