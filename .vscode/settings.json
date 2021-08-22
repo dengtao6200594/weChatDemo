@@ -4,5 +4,13 @@
   ],
   "cSpell.words": [
     "pagenum"
-  ]
+  ],
+  "files.associations": {
+    ".eslintrc": "json",
+    "*.vue": "vue",
+    "*.cjson": "jsonc",
+    "*.wxss": "css",
+    "*.wxs": "javascript",
+    "*.wxml": "html"
+  }
 }

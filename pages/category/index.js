@@ -18,7 +18,7 @@ Page({
         this.categoryData = wx.getStorageSync('categoryData')
         this.categoryData ? this.setData({ leftMenu: this.categoryData.message.map(v => v.cat_name) }) :
             this._getCategoryData()
-        this.getRightMenu(this.data.currentIndex)
+
     },
     // 点击左侧菜单栏
     tapIndex(event) {
@@ -43,7 +43,9 @@ Page({
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
-    onReady: function() {},
+    onReady: function() {
+        this.getRightMenu(this.data.currentIndex)
+    },
 
     /**
      * 生命周期函数--监听页面显示

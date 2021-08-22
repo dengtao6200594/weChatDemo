@@ -9,7 +9,7 @@
             <view class="rightItem" wx:for="{{rightMenu}}" wx:key="cat_id" wx:for-index="index1" wx:for-item="item1">
                 <view class="title"> {{item1.cat_name}}</view>
                 <view class="content">
-                    <navigator class="subItem" url="/pages/category/goodsList/index?cid={{item1.cat_id}}" wx:for="{{item1.children}}" wx:key="cat_id">
+                    <navigator class="subItem" url="/pages/category/goodsList/index?cid={{item.cat_id}}" wx:for="{{item1.children}}" wx:key="cat_id">
                         <image src="{{item.cat_icon}}" mode="widthFix"></image>
                         <view> {{item.cat_name}}</view>
                     </navigator>

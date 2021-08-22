@@ -5,7 +5,14 @@ export const getCategoryData = () =>
         url: '/api/public/v1/categories'
     })
     // 商品列表搜索
-export const getGoodsSearch = data => myRequest({
-    url: '/api/public/v1/goods/search',
-    data
-})
+export const getGoodsSearch = data =>
+    myRequest({
+        url: '/api/public/v1/goods/search',
+        data
+    })
+    // 商品详情
+export const getGoodsDetail = data =>
+    myRequest({
+        url: '/api/public/v1/goods/detail',
+        data
+    })

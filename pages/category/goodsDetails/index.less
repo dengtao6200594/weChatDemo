@@ -1,0 +1,88 @@
+/* pages/category/goodsDetails/index.wxss */
+.detail{
+	padding-bottom: 90rpx;
+}
+.detail_swiper {
+	height: 65vw;
+	text-align: center;
+	image {
+		width: 60%;
+	}
+}
+.price {
+	padding: 15rpx;
+	font-size: 32rpx;
+	font-weight: 400;
+	color: var(--themeColor);
+}
+.name_row {
+	display: flex;
+	padding-bottom: 10rpx;
+	border-bottom: 5rpx solid #dedede;
+	.detail_name {
+		flex: 5;
+		color: #000;
+		font-size: 30rpx;
+		padding: 0 10rpx;
+		display: -webkit-box;
+		overflow: hidden;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 2;
+	}
+	.detail_collect {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		border-left: 1rpx solid #000;
+	}
+}
+.good_info {
+	.good_title {
+		font-size: 32rpx;
+		color: var(--themeColor);
+		font-weight: 600;
+		padding: 20rpx;
+		border-bottom: 5rpx solid #dedede;
+	}
+}
+.btm_tools {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 90rpx;
+	background: #fff;
+	display: flex;
+	align-items: center;
+	.btm_tools_item {
+		flex: 1.2;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		position: relative;
+		button{
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			opacity: 0;
+		}
+	}
+	.addShoppingTrolley {
+		flex: 2;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: #ffa500;
+		color: #fff;
+		font-size: 30rpx;
+		font-weight: 600;
+	}
+	.buyImmediately {
+		.addShoppingTrolley();
+		background: #eb4450;
+	}
+}

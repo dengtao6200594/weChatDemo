@@ -1,2 +1,49 @@
-<!--pages/car/index.wxml-->
-<text>pages/car/index.wxml</text>
+<!-- 收获地址 -->
+<view class="revice_address">
+    <view class="btn">
+        <button bindtap="handleChooseAddress" type="primary" plain>获取收获地址</button>
+    </view>
+    <view class="userInfo">
+        <view class="user">
+            <view class="name">{{address.userName}}</view>
+            <view class="address">{{address.provinceName+address.cityName+address.countyName+address.detailInfo}}</view>
+        </view>
+        <view class="telephone">
+            <text> {{address.telNumber}}</text>
+        </view>
+    </view>
+    <view class="title">购物车</view>
+    <view class="cart" wx:for="{{cart}}" wx:key="goods_id">
+        <view class="cart_chk">
+            <checkbox-group data-id="{{item.goods_id}}" bindchange="isChecked">
+                <checkbox checked="{{item.checked}}"></checkbox>
+            </checkbox-group>
+        </view>
+        <navigator class="cart_image">
+            <image class="" src="{{item.pics[0].pics_sma}}" mode="widthFix" />
+        </navigator>
+        <view class="cart_info">
+            <view class="content">{{item.goods_name}}</view>
+            <view class="cart_info_price">
+                <text class="price">￥{{item.goods_price}}</text>
+                <view class="num">
+                    <view class="reduce" bindtap="numChange" data-operation="{{-1}}" data-id="{{item.goods_id}}">-</view>
+                    <view class="num">{{item.num}}</view>
+                    <view class="add" bindtap="numChange" data-operation="{{1}}" data-id="{{item.goods_id}}">+</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="footer">
+        <view class="all_checked">
+            <checkbox-group bindchange="isAllChecked">
+                <checkbox checked="{{isAllChecked}}" color="red">全选</checkbox>
+            </checkbox-group>
+        </view>
+        <view class="all_price">
+            <view class="price">合计:<text decode>&nbsp;￥{{totalPrice}}</text> </view>
+            <view class="remarks">包含运费</view>
+        </view>
+        <view class="total">结算({{checkedNum}})</view>
+    </view>
+</view>

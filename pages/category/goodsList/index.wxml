@@ -2,7 +2,7 @@
 <Tabs tabs="{{tabs}}" bind:activeChange="handleTabsChange">
     <block wx:if="{{tabs[0].isActive}}">
         <view class="content">
-            <navigator class="good" wx:for="{{goodLists}}" wx:key="goods_id">
+            <navigator class="good" url="/pages/category/goodsDetails/index?goods_id={{item.goods_id}}" wx:for="{{goodLists}}" wx:key="goods_id">
                 <view class="image">
                     <image mode="widthFix" src="{{item.goods_small_logo}}"></image>
                 </view>
