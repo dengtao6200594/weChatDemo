@@ -1,0 +1,109 @@
+page {
+	background: #eee;
+}
+.user_info {
+	position: relative;
+	.user_info_img {
+		overflow: hidden;
+		image {
+			width: 100%;
+			height: 50vh;
+			background: var(--themeColor);
+			//  高斯模糊
+			filter: blur(10rpx);
+		}
+	}
+	.user_info_head {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		.header {
+			image {
+				width: 165rpx;
+				height: 165rpx;
+				border-radius: 50%;
+			}
+		}
+		.user_info_name {
+			margin-top: 40rpx;
+			text-align: center;
+			color: #fff;
+		}
+	}
+	.btn {
+		width: 180rpx;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		font-size: 38rpx;
+	}
+}
+
+.user_main {
+  padding-bottom: 100rpx;
+  overflow: hidden;
+	position: relative;
+	width: 90%;
+	left: 50%;
+	top: -40rpx;
+  transform: translateX(-50%);
+	.history {
+    width: 100%;
+		position: absolute;
+		display: flex;
+		justify-content: space-between;
+		background: #fff;
+		navigator {
+			flex: 1;
+			view {
+				text-align: center;
+			}
+			.his_num {
+				color: var(--themeColor);
+			}
+		}
+	}
+	.orders {
+    background: #fff;
+    margin-top: 100rpx ;
+    .orders_title{
+      border-bottom: 5rpx solid #eee;
+      padding: 20rpx;
+    }
+    .orders_content{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20rpx 0;
+      navigator{
+        flex: 1;
+        text-align: center;
+        .iconfont{
+          color: var(--themeColor);
+        }
+      }
+    }
+	}
+  .address_manage,.service,.opinion,.our,.share{
+    background: #fff;
+    padding: 20rpx;
+  }
+  .address_manage{
+    margin-top: 20rpx;
+    margin-bottom: 20rpx;
+  }
+  .service{
+    display: flex;
+    justify-content: space-between;
+  }
+  .opinion,.our{
+    margin-top: 5rpx;
+		position: relative;
+	
+  }
+  .share{
+    margin-top: 20rpx;
+  }
+}

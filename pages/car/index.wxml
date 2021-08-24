@@ -1,9 +1,9 @@
 <!-- 收获地址 -->
 <view class="revice_address">
-    <view class="btn">
+    <view class="btn" wx:if="{{!address.userName}}">
         <button bindtap="handleChooseAddress" type="primary" plain>获取收获地址</button>
     </view>
-    <view class="userInfo">
+    <view class="userInfo" wx:else>
         <view class="user">
             <view class="name">{{address.userName}}</view>
             <view class="address">{{address.provinceName+address.cityName+address.countyName+address.detailInfo}}</view>
@@ -34,6 +34,9 @@
             </view>
         </view>
     </view>
+    <block wx:if="{{!cart.length}}">
+        <image class="bg" src="../../style/pics/cart.gif" mode="widthFix"></image>
+    </block>
     <view class="footer">
         <view class="all_checked">
             <checkbox-group bindchange="isAllChecked">
@@ -44,6 +47,6 @@
             <view class="price">合计:<text decode>&nbsp;￥{{totalPrice}}</text> </view>
             <view class="remarks">包含运费</view>
         </view>
-        <view class="total">结算({{checkedNum}})</view>
+        <view class="total" bindtap="settleAccounts">结算({{checkedNum}})</view>
     </view>
 </view>

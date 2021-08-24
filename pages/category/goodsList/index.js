@@ -21,11 +21,11 @@ Page({
 
     handleTabsChange(e) {
         const { index } = e.detail
-        const _tabs = this.data.tabs.map((v, i) => {
+        const tabs = this.data.tabs.map((v, i) => {
             index === i ? (v.isActive = true) : (v.isActive = false)
             return v
         })
-        this.setData({ tabs: _tabs })
+        this.setData({ tabs })
     },
     /**
      * 页面上拉触底事件的处理函数

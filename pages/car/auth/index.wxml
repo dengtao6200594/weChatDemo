@@ -1,0 +1,2 @@
+<!--pages/car/auth/index.wxml-->
+<button  type="primary" plain bindtap="getUserProfile">获取信息权限</button>

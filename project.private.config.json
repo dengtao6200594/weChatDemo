@@ -13,32 +13,26 @@
     "miniprogram": {
       "list": [
         {
-          "name": "pages/category/index",
-          "pathName": "pages/category/goodsList/index",
-          "query": "cid=9",
-          "scene": null
-        },
-        {
-          "name": "pages/category/goodsList/index",
-          "pathName": "pages/category/goodsList/index",
-          "query": "cid=9",
-          "scene": null
-        },
-        {
-          "name": "pages/category/goodsDetails/index",
+          "name": "商品详情",
           "pathName": "pages/category/goodsDetails/index",
-          "query": "goods_id=57444",
+          "query": "goods_id=9832",
           "scene": null
         },
         {
-          "name": "pages/car/index",
-          "pathName": "pages/car/index",
+          "name": "用户",
+          "pathName": "pages/user/index",
           "query": "",
           "scene": null
         },
         {
-          "name": "pages/car/index",
-          "pathName": "pages/car/index",
+          "name": "商品收藏",
+          "pathName": "pages/user/collect/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "搜索",
+          "pathName": "pages/search/index",
           "query": "",
           "scene": null
         }

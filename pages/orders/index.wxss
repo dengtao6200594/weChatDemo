@@ -1,0 +1,16 @@
+.orders {
+  padding: 20rpx  ;
+  border-bottom: 1rpx solid #ccc;
+}
+.orders .orders_num,
+.orders .orders_price,
+.orders .orders_data {
+  display: flex;
+  justify-content: space-between;
+  padding: 5rpx;
+}
+.orders .orders_num .price,
+.orders .orders_price .price,
+.orders .orders_data .price {
+  color: var(--themeColor);
+}

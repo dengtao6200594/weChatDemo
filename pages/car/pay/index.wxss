@@ -1,9 +1,6 @@
 page {
   padding-bottom: 90rpx;
 }
-.btn {
-  padding: 20rpx;
-}
 .userInfo {
   display: flex;
   justify-content: space-around;
@@ -20,10 +17,6 @@ page {
   align-items: center;
   padding: 10rpx;
   border-bottom: 1rpx solid #ccc;
-}
-.cart .cart_chk {
-  flex: 1;
-  text-align: center;
 }
 .cart .cart_image {
   flex: 2;
@@ -55,16 +48,6 @@ page {
   justify-content: space-around;
   align-items: center;
 }
-.cart .cart_info .cart_info_price .num .reduce,
-.cart .cart_info .cart_info_price .num .add {
-  width: 55rpx;
-  height: 55rpx;
-  text-align: center;
-  border: 1rpx solid #ccc;
-}
-.bg {
-  width: 100%;
-}
 .footer {
   position: fixed;
   bottom: 0;
@@ -76,10 +59,6 @@ page {
   height: 90rpx;
   background: #fff;
   border-top: 1rpx solid #ccc;
-}
-.footer .all_checked {
-  flex: 2;
-  text-align: center;
 }
 .footer .all_price {
   flex: 6;

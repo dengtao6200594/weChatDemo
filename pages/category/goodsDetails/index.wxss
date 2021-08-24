@@ -37,6 +37,9 @@
   align-items: center;
   border-left: 1rpx solid #000;
 }
+.name_row .detail_collect .collected {
+  color: orangered;
+}
 .good_info .good_title {
   font-size: 32rpx;
   color: var(--themeColor);

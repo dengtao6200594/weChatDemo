@@ -1,2 +1,71 @@
-<!--pages/user/index.wxml-->
-<text>pages/user/index.wxml</text>
+<view class="user">
+	<view class="user_info">
+		<view class="user_info_img">
+			<image src="{{ userInfo.avatarUrl }}" model="widthFix"></image>
+		</view>
+		<view class="user_info_head" wx:if="{{ userInfo }}">
+			<view class="header">
+				<image src="{{ userInfo.avatarUrl }}" model="widthFix"></image>
+			</view>
+			<view class="user_info_name">{{ userInfo.nickName }}</view>
+		</view>
+		<button
+			class="btn"
+			wx:if="{{ !userInfo }}"
+			type="primary"
+			plain
+			bindtap="getUserInfo"
+		>
+			登录
+		</button>
+	</view>
+
+	<view class="user_main">
+		<view class="history">
+			<navigator>
+				<view class="his_num">0</view>
+				<view class="his_name">收藏的店铺</view>
+			</navigator>
+			<navigator url="/pages/user/collect/index">
+				<view class="his_num">{{ collectNum }}</view>
+				<view class="his_name">收藏的商品</view>
+			</navigator>
+			<navigator>
+				<view class="his_num">0</view>
+				<view class="his_name">关注的商品</view>
+			</navigator>
+			<navigator>
+				<view class="his_num">0</view>
+				<view class="his_name">我的足迹</view>
+			</navigator>
+		</view>
+		<view class="orders">
+			<view class="orders_title">我的订单</view>
+			<view class="orders_content">
+				<navigator url="/pages/orders/index?type=1">
+					<view class="iconfont icondingdan1"></view>
+					<view class="orders_content_name">全部订单</view>
+				</navigator>
+				<navigator url="/pages/orders/index?type=2">
+					<view class="iconfont iconche1"></view>
+					<view class="orders_content_name">待付款</view>
+				</navigator>
+				<navigator url="/pages/orders/index?type=3">
+					<view class="iconfont iconyizhuanghuo"></view>
+					<view class="orders_content_name">待收货</view>
+				</navigator>
+				<navigator>
+					<view class="iconfont iconyingyeshouru"></view>
+					<view class="orders_content_name">退款/退货</view>
+				</navigator>
+			</view>
+		</view>
+		<view class="address_manage"> 收获地址管理 </view>
+		<view class="service"><text>联系客服</text><text>400-618-4000</text></view>
+		<navigator url="/pages/user/feedback/index">
+			<view class="opinion">意见反馈</view>
+		</navigator>
+		<view class="our">关于我们</view>
+		<view class="share">把应用分享给其他人</view>
+	</view>
+</view>

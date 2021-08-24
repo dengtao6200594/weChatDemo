@@ -1,0 +1,16 @@
+<!--pages/user/collect/index.wxml-->
+ <Tabs tabs="{{tabs}}" bind:activechange="handleTabsChange">
+  <block wx:if="{{tabs[0].isActive}}">
+    <view class="content">
+        <navigator class="good" url="/pages/category/goodsDetails/index?goods_id={{item.goods_id}}" wx:for="{{collect}}" wx:key="goods_id">
+            <view class="image">
+                <image mode="widthFix" src="{{item.pics[0].pics_sma}}"></image>
+            </view>
+            <view class="content">
+                <view class="name">{{item.goods_name}}</view>
+                <view class="price">￥{{item.goods_price}}</view>
+            </view>
+        </navigator>
+    </view>
+</block>
+ </Tabs>

@@ -20,7 +20,7 @@ Component({
     methods: {
         handleItemTap(e) {
             const { index } = e.currentTarget.dataset
-            this.triggerEvent('activeChange', { index })
+            this.triggerEvent('activechange', { index })
         }
     }
 })
