@@ -3,6 +3,7 @@
   height: calc(100vh - 90rpx);
 }
 .container .leftMenu {
+  padding-left: 5rpx;
   height: 100%;
   flex: 2;
 }

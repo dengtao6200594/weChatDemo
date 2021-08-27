@@ -1,32 +1,32 @@
 <view class="home">
-	<!-- 搜索栏 -->
-	<SearchInput />
-	<!-- 轮播图 -->
-	<swiper class="swiper" indicator-dots interval="5000" duration="1000" autoplay>
-		<swiper-item class="swiper_item" wx:for="{{swiperData}}" wx:key="goods_id">
-			<navigator url="" open-type="navigate">
-				<image class="swiper_img" mode="widthFix" src="{{item.image_src}}" />
-			</navigator>
-		</swiper-item>
-	</swiper>
-	<!-- 导航栏 -->
-	<view class="cate_list">
-		<navigator wx:for="{{catItems}}" wx:key="name">
-			<image class="cate_list_img" src="{{item.image_src}}" mode="widthFix" />
-		</navigator>
-	</view>
-	<!-- 展示楼层 -->
-	<view class="floor">
-		<view class="floor_group" wx:for="{{floorDate}}" wx:key="floor_title" wx:for-item="item1" wx:for-index="index1">
-			<view class="floor_title">
-				<image class="" src="{{item1.floor_title.image_src}}" mode="widthFix" />
-			</view>
-			<view class="floor_lists">
-				<navigator wx:for="{{item1.product_list}}" wx:key="name" wx:for-item="item2" wx:for-index="index2">
-					<image src="{{item2.image_src}}" />
-          <!-- <image src="{{item2.image_src}}" mode="scaleToFill" /> -->
-				</navigator>
-			</view>
-		</view>
-	</view>
+    <!-- 搜索栏 -->
+    <SearchInput />
+    <!-- 轮播图 -->
+    <swiper class="swiper" indicator-dots interval="5000" duration="1000" autoplay>
+        <swiper-item class="swiper_item" wx:for="{{swiperData}}" wx:key="goods_id">
+            <navigator url="/pages/category/goodsDetails/index?goods_id={{item.goods_id}}" open-type="navigate">
+                <image class="swiper_img" mode="widthFix" src="{{item.image_src}}" />
+            </navigator>
+        </swiper-item>
+    </swiper>
+    <!-- 导航栏 -->
+    <view class="cate_list">
+        <navigator url="/pages/category/goodsList/index" wx:for="{{catItems}}" wx:key="name">
+            <image class="cate_list_img" src="{{item.image_src}}" mode="widthFix" />
+        </navigator>
+    </view>
+    <!-- 展示楼层 缺少跳转-->
+    <view class="floor">
+        <view class="floor_group" wx:for="{{floorDate}}" wx:key="floor_title" wx:for-item="item1" wx:for-index="index1">
+            <view class="floor_title">
+                <image class="" src="{{item1.floor_title.image_src}}" mode="widthFix" />
+            </view>
+            <view class="floor_lists">
+                <navigator wx:for="{{item1.product_list}}" wx:key="name" wx:for-item="item2" wx:for-index="index2">
+                    <image src="{{item2.image_src}}" />
+                    <!-- <image src="{{item2.image_src}}" mode="scaleToFill" /> -->
+                </navigator>
+            </view>
+        </view>
+    </view>
 </view>

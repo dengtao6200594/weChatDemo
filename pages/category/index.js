@@ -1,5 +1,4 @@
 import { getCategoryData } from '../../api/category'
-// pages/category/index.js
 Page({
     /**
      * 页面的初始数据
@@ -17,7 +16,7 @@ Page({
     onLoad: function(options) {
         this.categoryData = wx.getStorageSync('categoryData')
         this.categoryData ? this.setData({ leftMenu: this.categoryData.message.map(v => v.cat_name) }) :
-            this._getCategoryData()
+            this._getCategoryData().then(() => this.getRightMenu(0))
 
     },
     // 点击左侧菜单栏
@@ -28,16 +27,17 @@ Page({
     },
 
     getRightMenu(index) {
-        // getCategoryData().then(({ message }) => this.setData({ rightMenu: message[index].children }))
         this.setData({ rightMenu: this.categoryData.message[index].children })
     },
     _getCategoryData() {
-        getCategoryData().then(({ message }) => {
+        return new Promise(resolve => getCategoryData().then(({ message }) => {
             const leftMenu = message.map(v => v.cat_name)
             this.categoryData = { date: Date.now(), message }
             wx.setStorageSync('categoryData', this.categoryData)
             this.setData({ leftMenu })
-        })
+            resolve()
+        }))
+
     },
 
     /**

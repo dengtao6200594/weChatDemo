@@ -6,7 +6,7 @@ Component({
     properties: {
         tabs: { type: Array, value: [] }
     },
-
+    // [id:number,value:any,isActive:boolean]
     /**
      * 组件的初始数据
      */
